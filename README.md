@@ -6,9 +6,26 @@ Github ID: kirrot5
 Github link: https://github.com/kirrot5/elec5305-project-530337094
 Video link: https://sydney.instructuremedia.com/embed/ece65e45-0311-4633-af8d-05c12eec9c55  （If the link cannot be opened, please copy and paste it into the address bar.）
 
-Project Overview
-This project aims to develop a system that can automatically separate mixed music into vocals and accompaniment. This task has significant application value in scenarios such as karaoke, music production, and audio editing. The project will initially utilize short-time Fourier transform (STFT) and spectral masking methods to achieve baseline separation, and further explore deep learning methods based on U-Net and Demucs to improve the separation quality. By comparing traditional and deep learning methods and conducting experiments and evaluations on the MUSDB18 dataset, the project will develop a functional prototype for automatic music separation and demonstrate its potential value in accompaniment generation and intelligent audio applications.
+This project implements three typical music source separation methods: Nonnegative Matrix Factorization (NMF), Harmonic-Transient Separation (HPSS), and a deep learning-based Demucs model. All methods are tested on the same real pop music track. This repository contains the complete source code, visualization tools, experimental results examples, and video links for demonstrations.
 
-Background
-Music signal separation is an important research direction in audio signal processing, aiming to extract different sound sources from mixed audio, such as human voices and accompaniment. This issue has practical application value in karaoke, music production, and information retrieval. Early methods mainly relied on traditional signal processing and matrix decomposition, such as non-negative matrix factorization (Lee & Seung, 1999; Virtanen, 2007) and independent component analysis. However, their performance was limited in complex music scenarios.
-In recent years, deep learning methods have significantly improved the separation performance. The U-Net network achieved excellent results in human voice separation (Jansson et al., 2017), while the Demucs model performed outstandingly in international evaluations through time-domain modeling (Defossez et al., 2019). Nevertheless, existing models still face challenges such as insufficient generalization ability, high computational cost, and artifact problems.
+The output results and song examples have also been uploaded to the corresponding folders.
+
+src/                 # NMF / HPSS / Demucs The core code of the three methods
+data/                # Input audio
+experiments/         # Experimental code
+outputs/             # The automatically generated vocal and accompaniment files, along with the resulting image, are displayed after running the program.
+main.py              
+requirements.txt     
+
+Installation Environment
+pip install -r requirements.txt
+
+ Run Code
+ nmf                     
+ python main.py --method nmf
+ 
+ hpss                    
+ python main.py --method hpss
+ 
+ demucs                  
+ python main.py --method demucs
