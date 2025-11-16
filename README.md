@@ -4,6 +4,7 @@ Name: Kiro Chen
 SID: 530337094
 Github ID: kirrot5
 Github link: https://github.com/kirrot5/elec5305-project-530337094
+Video link: https://sydney.instructuremedia.com/embed/ece65e45-0311-4633-af8d-05c12eec9c55
 
 Project Overview
 This project aims to develop a system that can automatically separate mixed music into vocals and accompaniment. This task has significant application value in scenarios such as karaoke, music production, and audio editing. The project will initially utilize short-time Fourier transform (STFT) and spectral masking methods to achieve baseline separation, and further explore deep learning methods based on U-Net and Demucs to improve the separation quality. By comparing traditional and deep learning methods and conducting experiments and evaluations on the MUSDB18 dataset, the project will develop a functional prototype for automatic music separation and demonstrate its potential value in accompaniment generation and intelligent audio applications.
